@@ -4,7 +4,7 @@ const sequelize = require("../../config/database");
 const db = {};
 
 db.User = require("./user")(sequelize, Sequelize.DataTypes);
-db.Todo = require("./Todo")(sequelize, Sequelize.DataTypes);
+db.Todo = require("./todo")(sequelize, Sequelize.DataTypes);
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
