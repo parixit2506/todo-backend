@@ -3,7 +3,7 @@
 const Sequelize = require("sequelize");
 const dbConfig = require("../database/config/auth");
 
-const config = dbConfig[process.env.NODE_ENV || "development"];
+const config = dbConfig[process.env.NODE_ENV] || dbConfig.development;
 
 const sequelize = new Sequelize(
     config.database,
