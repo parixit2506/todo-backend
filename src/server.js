@@ -6,7 +6,7 @@ const userRoutes = require('./api/routes/index');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use(cors({origin: 'https://nn94wrgg-3000.inc1.devtunnels.ms',credentials: true}));
+app.use(cors({origin: '*',credentials: true}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
