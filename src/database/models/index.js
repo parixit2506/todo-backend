@@ -14,7 +14,7 @@ async function initializedatabase() {
         await sequelize.authenticate();
         console.log("Database connected successfully");
 
-        await sequelize.sync({ force: false });
+        await sequelize.sync({ alter: true });
         console.log("All models were synchronized successfully.");
     } catch (err) {
         console.error("Unable to connect to database:", err);
